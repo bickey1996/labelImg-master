@@ -413,8 +413,8 @@ class Canvas(QWidget):
             #rshift = QPointF(shiftPos.x(), 0)
             #lshift = QPointF(0, shiftPos.y())
             shape.moveCursorBy(c_index, yshift)
-            #if(cursor_point.x()-pos.x()):
-            shape.moveCursorBy(c_index, xashift)
+            if(cursor_point.x()-pos.x()):
+                shape.moveCursorBy(c_index, xashift)
             shape.moveVertexBy(index, yshift)
             shape.moveVertexBy((index+1)%4, yshift)
             
@@ -423,8 +423,8 @@ class Canvas(QWidget):
             #lshift = QPointF(shiftPos.x(), 0)
             #rshift = QPointF(0, shiftPos.y())
             shape.moveCursorBy(c_index, xshift)
-            #if(cursor_point.y()-pos.y()):
-            shape.moveCursorBy(c_index, yashift)
+            if(cursor_point.y()-pos.y()):
+                shape.moveCursorBy(c_index, yashift)
             shape.moveVertexBy(index, xshift)
             shape.moveVertexBy((index+1)%4, xshift)
             
